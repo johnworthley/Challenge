@@ -1,0 +1,44 @@
+[
+    {
+        "timestamp": 1532704418,
+        "title": "Clean up the Great Pacific Garbage Patch",
+        "content": "The Great Pacific Garbage Patch stretches across 617,000 square miles of the northern Pacific Ocean, based on their survey, and plastics make up 99.9 percent of the trash in the patch. The international team took the extra step of conducting aircraft surveys — covering 120 square miles and snapping 7,300 photographs — so they could better calculate the amount of large pieces of plastic. Then, like prior studies, the team used math models and ocean current projections to estimate the scale of the Great Pacific Garbage Patch. What they found: The Great Pacific Garbage Patch stretches across 617,000 square miles of the northern Pacific Ocean, based on their survey, and plastics make up 99.9 percent of the trash in the patch. ",
+        "img1": "https://s3.ca-central-1.amazonaws.com/oceaneos/turtle.png",
+        "img2": "https://s3.ca-central-1.amazonaws.com/oceaneos/plasticocean.png",
+        "img3": "https://s3.ca-central-1.amazonaws.com/oceaneos/deadturtle.png",
+        "startDatetime": "June 1st 2019 10 AM",
+        "endDatetime": "July 31st 2019 5 PM",
+        "tag": "Pasific Ocean",
+        "address": "Lat: 33.507049, Long: -136.046652",
+        "locationimg": "https://s3.ca-central-1.amazonaws.com/oceaneos/ocean.png",
+        "owner": "Conservation Council for Hawai'i"
+    },
+    {
+        "timestamp": 1532704418,
+        "title": "EOS Sydney Hackathon",
+        "content": "We have used more plastic bottles over the last 48 hours than we have over a month. Lets ensure all the plastic bottles we use for this hackathon end up in the recycling. Also, we all received a swag EOS metal water bottle! You can save some plastic and use that.",
+        "img1": "https://s3.ca-central-1.amazonaws.com/oceaneos/eos.JPG",
+        "img2": "https://s3.ca-central-1.amazonaws.com/oceaneos/eos2.JPG",
+        "img3": "https://s3.ca-central-1.amazonaws.com/oceaneos/eos3.JPG",
+        "startDatetime": "Aug 4th 2018 9 AM",
+        "endDatetime": "Aug 5th 2018 6 PM",
+        "tag": "Sydney",
+        "address": "14 Darling Dr, Sydney NSW 2000",
+        "locationimg": "https://s3.ca-central-1.amazonaws.com/oceaneos/eosmap.png",
+        "owner": "Conservation Council for Hawai'i"
+    },
+    {
+        "timestamp": 1532704418,
+        "title": "Save San Diego's Beaches",
+        "content": "Welcome to Save San Diego's Beaches' Google site!  This website was created to inform everyone about trash on the beach, the causes, the effects, and how you can help solve this probelm.  Over 267 marine species are harmed by trash on the beach.  This website is made inform you about the problem, educate you on what you can do to help, and inspire you to make a difference! This website was made by a group of four students at Correia Middle School.  We have also made a Facebook page, http://www.facebook.com/home.php#!/pages/Save-San-Diego-Beaches/131783720231920, and created some fliers we will give out.  We are also going to do a beach clean up soon!  We have taken action to help solve this problem and hope everyone who visits this website will too!",
+        "img1": "https://s3.ca-central-1.amazonaws.com/oceaneos/san.png",
+        "img2": "",
+        "img3": "",
+        "startDatetime": "Sept 4th 2018 9 AM",
+        "endDatetime": "Sept 5th 2018 6 PM",
+        "tag": "Sydney",
+        "address": "2050 S Coast Hwy 101, Cardiff, CA 92007, USA",
+        "locationimg": "https://s3.ca-central-1.amazonaws.com/oceaneos/sanmap.png",
+        "owner": "Mark James"
+    }
+]
