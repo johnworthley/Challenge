@@ -155,7 +155,8 @@ class User extends Component {
 
     return (
       <div className={`layoutStandard ${this.state.createOpen ? 'createOpen' : ''}`}>
-        <div className='logo' style={{display: 'flex', flexDirection:'row'}}><img src={RealLogo} width="28px" height="28px" style={{marginRight:8}}/>ECOES</div>
+        <div className='logo' style={{display: 'flex', flexDirection:'row'}}><img src={RealLogo} width="28px" height="28px" style={{marginRight:8}}/>
+        <Link style={{color:'white',textDecoration:'none'}}to="/">ECOES</Link></div>
         <div className='main'>
           <div className='userContainer'>
             <div className='userHeader'>
@@ -296,7 +297,8 @@ class Project extends Component {
 
     return (
       <div className={`layoutStandard ${this.state.createOpen ? 'createOpen' : ''}`}>
-        <div className='logo' style={{display: 'flex', flexDirection:'row'}}><img src={RealLogo} width="28px" height="28px" style={{marginRight:8}}/>ECOES</div>
+        <div className='logo' style={{display: 'flex', flexDirection:'row'}}><img src={RealLogo} width="28px" height="28px" style={{marginRight:8}}/>
+        <Link style={{color:'white',textDecoration:'none'}}to="/">ECOES</Link></div>
         <div className='main'>
           <div className='userContainer'>
             <div>
@@ -431,7 +433,8 @@ class Home extends Component {
   render () {
     return (
       <div className={`layoutStandard ${this.state.createOpen ? 'createOpen' : ''}`}>
-        <div className='logo' style={{display: 'flex', flexDirection:'row'}}><img src={RealLogo} width="28px" height="28px" style={{marginRight:8}}/>ECOES</div>
+        <div className='logo' style={{display: 'flex', flexDirection:'row'}}><img src={RealLogo} width="28px" height="28px" style={{marginRight:8}}/>
+        <Link style={{color:'white',textDecoration:'none'}}to="/">ECOES</Link></div>
         <div className='main'>
           <div className='toggleCreate' onClick={this.toggleCreate} />
           <CreatePost createPost={this.createPost} />
