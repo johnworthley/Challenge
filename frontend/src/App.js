@@ -9,6 +9,7 @@ import { updatePostsForCreateAndEdit, updatePostsForLike, updatePostsForDelete }
 import CreatePost from './CreatePost/CreatePost'
 import Posts from './Posts/Posts'
 import RealLogo from './assets/styles/img/logoReal.png';
+import Splash from './screens/Splash';
 
 
 class App extends Component {
@@ -16,6 +17,11 @@ class App extends Component {
     const routesInfo = [
       {
         path: '/',
+        component: Splash,
+        title: 'splash'
+      },
+      {
+        path: '/home',
         component: Home,
         title: 'home'
       },
