@@ -10,9 +10,12 @@ import CreatePost from './CreatePost/CreatePost'
 import Posts from './Posts/Posts'
 import RealLogo from './assets/styles/img/logoReal.png';
 import Splash from './screens/Splash';
+import ScatterJS from 'scatter-js/dist/scatter.esm';
 
 
 class App extends Component {
+
+
   render() {
     const routesInfo = [
       {
@@ -72,7 +75,6 @@ class User extends Component {
 
   // Enable Realtime updates via Socket.io
   async componentDidMount () {
-
   }
 
 
@@ -211,7 +213,6 @@ class Project extends Component {
 
   // Enable Realtime updates via Socket.io
   async componentDidMount () {
-
   }
 
 
@@ -322,6 +323,7 @@ class Home extends Component {
     createOpen: false,
     posts: []
   }
+
 
   // Instantiate shared eosjs helper and socket io helper
   constructor (props) {

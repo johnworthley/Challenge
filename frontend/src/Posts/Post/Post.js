@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import EditPost from '../EditPost/EditPost';
-import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
+import EditPost from '../EditPost/EditPost'
+import { BrowserRouter as Router, Link, Route } from 'react-router-dom'
 
 class Post extends Component {
   state = {
