@@ -50,3 +50,4 @@ echo "=== npm install packpage for frontend react app ==="
 cd "./backend"
 npm install
 cd "../"
+echo "Startup Finished"
