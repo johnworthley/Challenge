@@ -18,7 +18,7 @@ const styles = theme => ({
   },
 });
 
-  
+
 function FloatingActionButtons(props) {
 
   const { classes } = props;

@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
-
 import axios from 'axios'
-
 import EOSIOClient from './utils/eosio-client'
 import IOClient from './utils/io-client'
 import { updatePostsForCreateAndEdit, updatePostsForLike, updatePostsForDelete } from './utils/posts-updater'
@@ -11,10 +9,13 @@ import Posts from './Posts/Posts'
 import RealLogo from './assets/styles/img/logoReal.png';
 import Splash from './screens/Splash';
 import ScatterJS from 'scatter-js/dist/scatter.esm';
+import PrimarySearchAppBar from './components/appBar';
+
 
 
 class App extends Component {
 
+  
 
   render() {
     const routesInfo = [
@@ -324,7 +325,6 @@ class Home extends Component {
     posts: []
   }
 
-
   // Instantiate shared eosjs helper and socket io helper
   constructor (props) {
     super(props)
@@ -349,6 +349,7 @@ class Home extends Component {
 
   // Load posts
   loadPosts = async () => {
+    PrimarySearchAppBar();
     const response = await axios.get(`${process.env.REACT_APP_API_URL}/posts`)
     this.setState({ posts: response.data.reverse() })
   }
@@ -439,6 +440,8 @@ class Home extends Component {
   }
 
   render () {
+
+    PrimarySearchAppBar;
     return (
       <div className={`layoutStandard ${this.state.createOpen ? 'createOpen' : ''}`}>
         <div className='logo' style={{display: 'flex', flexDirection:'row'}}><img src={RealLogo} width="28px" height="28px" style={{marginRight:8}}/>
