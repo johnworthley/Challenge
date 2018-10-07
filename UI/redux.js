@@ -10,7 +10,7 @@ const NAV_POP = 'NAV_POP';
 const initialNavState = {
   index: 0,
   routes: [
-    { key: 'RestaurantsList' },
+    { key: 'ecoesList' },
   ],
 };
 

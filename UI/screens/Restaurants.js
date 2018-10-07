@@ -8,10 +8,10 @@ import {
 } from '@shoutem/ui/navigation';
 
 import { navigatePop } from '../redux';
-import RestaurantsList from './RestaurantsList';
+import ecoesList from './ecoesList';
 import RestaurantDetails from './RestaurantDetails';
 
-class Restaurants extends Component {
+class ecoes extends Component {
   static propTypes = {
     onNavigateBack: PropTypes.func.isRequired,
     navigationState: PropTypes.object,
@@ -28,7 +28,7 @@ class Restaurants extends Component {
   renderScene(props) {
     const { route } = props.scene;
 
-    let Screen = route.key === 'RestaurantDetails' ? RestaurantDetails : RestaurantsList;
+    let Screen = route.key === 'RestaurantDetails' ? RestaurantDetails : ecoesList;
     return (<Screen {...route.props} />);
   }
 
@@ -60,4 +60,4 @@ class Restaurants extends Component {
 export default connect(
   state => ({ navigationState: state.navigationState }),
   { onNavigateBack: navigatePop }
-)(Restaurants);
+)(ecoes);

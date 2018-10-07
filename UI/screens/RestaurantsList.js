@@ -18,7 +18,7 @@ import { connect } from 'react-redux';
 
 import { navigatePush } from '../redux';
 
-class RestaurantsList extends Component {
+class ecoesList extends Component {
   static propTypes = {
     onButtonPress: PropTypes.func,
   };
@@ -28,22 +28,22 @@ class RestaurantsList extends Component {
     this.renderRow = this.renderRow.bind(this);
   }
 
-  getRestaurants() {
-    return require('../assets/data/restaurants.json');
+  getecoes() {
+    return require('../assets/data/ecoess.json');
   }
 
-  renderRow(restaurant) {
+  renderRow(ecoes) {
     const { onButtonPress } = this.props;
 
     return (
-      <TouchableOpacity onPress={() => onButtonPress(restaurant)}>
+      <TouchableOpacity onPress={() => onButtonPress(ecoes)}>
         <ImageBackground
           styleName="large-banner"
-          source={{ uri: restaurant.image.url }}
+          source={{ uri: ecoes.image.url }}
         >
           <Tile>
-            <Title styleName="md-gutter-bottom">{restaurant.name}</Title>
-            <Subtitle styleName="sm-gutter-horizontal">{restaurant.address}</Subtitle>
+            <Title styleName="md-gutter-bottom">{ecoes.name}</Title>
+            <Subtitle styleName="sm-gutter-horizontal">{ecoes.address}</Subtitle>
           </Tile>
         </ImageBackground>
         <Divider styleName="line" />
@@ -54,10 +54,10 @@ class RestaurantsList extends Component {
   render() {
     return (
       <Screen>
-        <NavigationBar title="All Restaurants" />
+        <NavigationBar title="All ecoes" />
           <ListView
-            data={this.getRestaurants()}
-            renderRow={restaurant => this.renderRow(restaurant)}
+            data={this.getecoes()}
+            renderRow={ecoes => this.renderRow(ecoes)}
           />
       </Screen>
     );
@@ -65,15 +65,15 @@ class RestaurantsList extends Component {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  onButtonPress: (restaurant) => {
+  onButtonPress: (ecoes) => {
     dispatch(navigatePush({
       key: 'RestaurantDetails',
       title: 'Details',
-    }, { restaurant }));
+    }, { ecoes }));
   },
 });
 
 export default connect(
 	undefined,
 	mapDispatchToProps
-)(RestaurantsList);
+)(ecoesList);
