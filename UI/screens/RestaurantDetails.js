@@ -20,35 +20,34 @@ import {
 
 export default class RestaurantDetails extends Component {
   static propTypes = {
-    ecoes: PropTypes.object,
+    restaurant: PropTypes.object,
   };
 
   render() {
-    const { ecoes } = this.props;
+    const { restaurant } = this.props;
 
     return (
       <Screen styleName="paper full-screen">
         <NavigationBar
-          title={ecoes.name}
+          title={restaurant.name}
           styleName="clear hide-title"
           animationName="solidify"
         />
 
-        <ScrollView>
           <ImageBackground
             styleName="large-portrait hero"
             animationName="hero"
-            source={{ uri: ecoes.image && ecoes.image.url }}
-            key={ecoes.name}
+            source={{ uri: restaurant.image && restaurant.image.url }}
+            key={restaurant.name}
           >
             <Tile animationName="hero">
-              <Title>{ecoes.name}</Title>
-              <Subtitle>{ecoes.address}</Subtitle>
+              <Title>{restaurant.name}</Title>
+              <Subtitle>{restaurant.address}</Subtitle>
             </Tile>
           </ImageBackground>
 
           <Screen styleName="paper">
-            <Text styleName="md-gutter multiline">{ecoes.description}</Text>
+            <Text styleName="md-gutter multiline">{restaurant.description}</Text>
 
             <Divider styleName="line" />
 
@@ -56,7 +55,7 @@ export default class RestaurantDetails extends Component {
               <Icon name="laptop" />
               <View styleName="vertical">
                 <Subtitle>Visit webpage</Subtitle>
-                <Text numberOfLines={1}>{ecoes.url}</Text>
+                <Text numberOfLines={1}>{restaurant.url}</Text>
               </View>
             </Row>
 
@@ -66,7 +65,7 @@ export default class RestaurantDetails extends Component {
               <Icon name="pin" />
               <View styleName="vertical">
                 <Subtitle>Address</Subtitle>
-                <Text numberOfLines={1}>{ecoes.address}</Text>
+                <Text numberOfLines={1}>{restaurant.address}</Text>
               </View>
             </Row>
 
@@ -76,13 +75,13 @@ export default class RestaurantDetails extends Component {
               <Icon name="email" />
               <View styleName="vertical">
                 <Subtitle>Email</Subtitle>
-                <Text numberOfLines={1}>{ecoes.mail}</Text>
+                <Text numberOfLines={1}>{restaurant.mail}</Text>
               </View>
             </Row>
 
             <Divider styleName="line" />
           </Screen>
-        </ScrollView>
+        
       </Screen>
     );
   }

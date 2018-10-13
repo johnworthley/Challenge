@@ -405,7 +405,7 @@ form {
     background-size: 0 2px, 100% 1px;
     background-repeat: no-repeat;
     background-position: center bottom, center calc(100% - 1px);
-    background-color: rgba(0, 0, 0, 0);
+    background-color: #636b60;
     transition: background 0s ease-out;
     float: none;
     box-shadow: none;

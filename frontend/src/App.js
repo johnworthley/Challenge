@@ -8,14 +8,11 @@ import CreatePost from './CreatePost/CreatePost'
 import Posts from './Posts/Posts'
 import RealLogo from './assets/styles/img/logoReal.png';
 import Splash from './screens/Splash';
-import ScatterJS from 'scatter-js/dist/scatter.esm';
 import PrimarySearchAppBar from './components/appBar';
-
-
+import ECOESList from './components/courseList';
 
 class App extends Component {
 
-  
 
   render() {
     const routesInfo = [
@@ -349,7 +346,6 @@ class Home extends Component {
 
   // Load posts
   loadPosts = async () => {
-    PrimarySearchAppBar();
     const response = await axios.get(`${process.env.REACT_APP_API_URL}/posts`)
     this.setState({ posts: response.data.reverse() })
   }
@@ -441,12 +437,13 @@ class Home extends Component {
 
   render () {
 
-    PrimarySearchAppBar;
     return (
-      <div className={`layoutStandard ${this.state.createOpen ? 'createOpen' : ''}`}>
-        <div className='logo' style={{display: 'flex', flexDirection:'row'}}><img src={RealLogo} width="28px" height="28px" style={{marginRight:8}}/>
-        <Link style={{color:'white',textDecoration:'none'}}to="/">ECOES</Link></div>
-        <div className='main'>
+      <div class="app">
+        <div fixed>
+          <PrimarySearchAppBar />
+          <ECOESList />
+        </div>
+        <div className={`layoutStandard ${this.state.createOpen ? 'createOpen' : ''}`}>
           <div className='toggleCreate' onClick={this.toggleCreate} />
           <CreatePost createPost={this.createPost} />
           <div className='cards'>

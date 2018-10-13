@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+  -webkit-tap-highlight-color: #636b60; }
   *:focus {
     outline: 0;
   }
@@ -21,11 +21,11 @@ body {
 hr {
   border: none;
   height: 1px;
-  background: #eaeaea;
+  background: #636b60;
   margin: 2.5rem 0; }
 
 ::placeholder {
-  color: #888888; }
+  color: #636b60; }
 
 img {
   border: 0;
@@ -70,7 +70,7 @@ a {
 
 .buttonHolder div {
   background-color: grey;
-  color:white;
+  color:#636b60;
   margin: 4px;
   padding: 10px;
   padding-left: 16px;
@@ -100,11 +100,11 @@ input, textarea {
   width: 100%;
   border: 2px solid #eaeaea;
   border-radius: .3rem;
-  color: #222222;
+  color: #636b60;
   padding: 1rem 1rem;
   font-size: 1rem; }
   input:focus, textarea:focus {
-    border-color: #000000; }
+    border-color: #636b60; }
 
 textarea {
   line-height: 1.8rem;
@@ -145,7 +145,7 @@ textarea {
 
 .userHeaderRow2 div {
   background-color: grey;
-  color:white;
+  color:#636B60;  
   margin: 4px;
   padding: 2px;
   padding-left: 8px;
@@ -167,7 +167,7 @@ div.infoContainer {
   padding:20px;
   border-bottom: 4px solid #C6F1A9;
   background-color: black;
-  color: white;
+  color: #636B60;
   box-shadow: 0px 4px 10px silver;
 }
 
@@ -181,26 +181,26 @@ div.infoContainer {
 
 button, .btn, submit {
   border: none;
-  background: 'white';
+  background: #636b60;
   border-radius: .3rem;
-  color: #ffffff;
+  color: #636b60;
   padding: 1rem 1.5rem;
   font-size: 1rem;
   cursor: pointer;
-  background: linear-gradient(135deg, #ffffff 0%, #cc00ff 100%); }
+  background: linear-gradient(135deg, white 10%, white 40%); }
   button:hover, .btn:hover, submit:hover {
-    background: linear-gradient(135deg, #ffffff 0%, #cc00ff 0%); }
+    background: linear-gradient(135deg, white 40%, white  40%); }
   button.secondary, .btn.secondary, submit.secondary {
     background: transparent;
     padding: 3.9rem 1.4rem;
-    border: 40px solid transparent;
-    color: #ffffff; }
+    border: 40px solid transparent; 
+    color: #636b60; }
 
 .btn.btn-gray {
-    border: 2px solid #C7C7C7;
+    border: 2px solid #636B60;
     border-radius: 4em;
-    background: #e8e8e8;
-    color: #000;
+    background: #636b60;
+    color: #636b60;
     padding: 0 2em;
     line-height: 3.6em; }
 
@@ -261,7 +261,7 @@ button, .btn, submit {
     height: 25px;
     padding: 0px 0 0 24px; }
   .card-item .heart {
-    background-color: #D8DFE2;
+    background-color: #636B60;
     cursor: pointer;
     display: inline-block;
     height: 15px;
@@ -273,7 +273,7 @@ button, .btn, submit {
     right: 30px; }
     .card-item .heart:before, .card-item .heart:after {
       content: "";
-      background-color: #D8DFE2;
+      background-color: #636B60;
       border-radius: 50%;
       height: 15px;
       position: absolute;
@@ -349,12 +349,12 @@ button, .btn, submit {
   background-position: 30px center;
   background-repeat: no-repeat;
   height: 80px;
-  color: #ffffff;
+  color: #636B60;
   padding: 26px 20px 0 80px;
   font-size: 1.6rem; }
 
 .layoutStandard .main {
   min-height: 100vh;
   grid-area: main;
-  background: #FFFFF5;
+  background: #636B60;
   padding-top: 20px; }

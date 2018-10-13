@@ -1,4 +1,4 @@
-package com.ecoessapp;
+package com.restaurantsapp;
 
 import android.app.Application;
 

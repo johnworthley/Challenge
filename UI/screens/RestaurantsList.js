@@ -9,16 +9,20 @@ import {
   TouchableOpacity,
   Screen,
   Divider,
+  Button,
+  Icon,
+  Text,
+  NavigationBar,
 } from '@shoutem/ui';
 
-import {
+/*import {
   NavigationBar,
-} from '@shoutem/ui/navigation';
+} from '@shoutem/ui/navigation';*/
 import { connect } from 'react-redux';
 
 import { navigatePush } from '../redux';
 
-class ecoesList extends Component {
+class RestaurantsList extends Component {
   static propTypes = {
     onButtonPress: PropTypes.func,
   };
@@ -28,22 +32,22 @@ class ecoesList extends Component {
     this.renderRow = this.renderRow.bind(this);
   }
 
-  getecoes() {
-    return require('../assets/data/ecoess.json');
+  getRestaurants() {
+    return require('../assets/data/restaurants.json');
   }
 
-  renderRow(ecoes) {
+  renderRow(restaurant) {
     const { onButtonPress } = this.props;
 
     return (
-      <TouchableOpacity onPress={() => onButtonPress(ecoes)}>
+      <TouchableOpacity onPress={() => onButtonPress(restaurant)}>
         <ImageBackground
           styleName="large-banner"
-          source={{ uri: ecoes.image.url }}
+          source={{ uri: restaurant.image.url }}
         >
           <Tile>
-            <Title styleName="md-gutter-bottom">{ecoes.name}</Title>
-            <Subtitle styleName="sm-gutter-horizontal">{ecoes.address}</Subtitle>
+            <Title styleName="md-gutter-bottom">{restaurant.name}</Title>
+            <Subtitle styleName="sm-gutter-horizontal">{restaurant.address}</Subtitle>
           </Tile>
         </ImageBackground>
         <Divider styleName="line" />
@@ -54,10 +58,25 @@ class ecoesList extends Component {
   render() {
     return (
       <Screen>
-        <NavigationBar title="All ecoes" />
+    <NavigationBar
+      styleName="inline"
+
+      leftComponent={
+        <Button>
+          <Icon name="sidebar" />
+        </Button>
+      }
+      centerComponent={<Title>ECOES</Title>}
+      rightComponent={(
+        <Button styleName="clear">
+          <Text>Login</Text>
+        </Button>
+      )}
+/>
+
           <ListView
-            data={this.getecoes()}
-            renderRow={ecoes => this.renderRow(ecoes)}
+            data={this.getRestaurants()}
+            renderRow={restaurant => this.renderRow(restaurant)}
           />
       </Screen>
     );
@@ -65,15 +84,15 @@ class ecoesList extends Component {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  onButtonPress: (ecoes) => {
+  onButtonPress: (restaurant) => {
     dispatch(navigatePush({
       key: 'RestaurantDetails',
       title: 'Details',
-    }, { ecoes }));
+    }, { restaurant }));
   },
 });
 
 export default connect(
 	undefined,
 	mapDispatchToProps
-)(ecoesList);
+)(RestaurantsList);
