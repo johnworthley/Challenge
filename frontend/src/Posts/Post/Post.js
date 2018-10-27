@@ -41,8 +41,6 @@ class Post extends Component {
             <div className='detailAvatar'><Link style={{color:'grey', textDecoration: 'none'}} to="/user">{this.props.post.author}</Link></div>
             <div className='detailHeart'>{this.props.post.likes}</div>
             <div className="detailTag">{this.props.post.tag}</div>
-          </div>
-          <div className='padding-30 grid-2'>
             <div onClick={() => {this.props.deletePost(this.props.post)}} className='iconDelete'></div>
             <div onClick={this.toggleEditing} className='iconEdit'></div>
           </div>

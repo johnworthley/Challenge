@@ -9,7 +9,9 @@ import Posts from './Posts/Posts'
 import RealLogo from './assets/styles/img/logoReal.png';
 import Splash from './screens/Splash';
 import PrimarySearchAppBar from './components/appBar';
-import ECOESList from './components/courseList';
+import ECOESList from './components/eventList';
+import JJ from './jj.js';
+import { ECONNRESET } from 'constants';
 
 class App extends Component {
 
@@ -442,6 +444,7 @@ class Home extends Component {
         <div fixed>
           <PrimarySearchAppBar />
           <ECOESList />
+          <JJ />
         </div>
         <div className={`layoutStandard ${this.state.createOpen ? 'createOpen' : ''}`}>
           <div className='toggleCreate' onClick={this.toggleCreate} />

@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/johnworthley/Challenge/issues"
   },
-  "homepage": "https://github.com/johnworthley/Challenge#readme"
+  "homepage": "https://github.com/johnworthley/Challenge#readme",
+  "dependencies": {
+    "mongoose": "^5.3.7",
+    "redux": "^4.0.1",
+    "scatterjs-core": "^2.3.2",
+    "scatterjs-plugin-eosjs": "^1.3.3"
+  }
 }
