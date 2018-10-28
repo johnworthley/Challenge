@@ -17,6 +17,8 @@ docker run --rm --name eosio_blog_container -d \
 --mount type=bind,src="$(pwd)"/scripts,dst=/opt/eosio/bin/scripts \
 --mount type=bind,src="$(pwd)"/data,dst=/mnt/dev/data \
 -w "/opt/eosio/bin/" eosio/eos-dev:v1.1.0 /bin/bash -c "$script"
+alias cleos='docker exec -i eosio_blog_container /opt/eosio/bin/cleos --wallet-url http://localhost:8888 -u https://api.eosnewyork.io:443'
+
 
 if [ "$1" != "--nolog" ]
 then
