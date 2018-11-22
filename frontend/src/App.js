@@ -3,7 +3,11 @@ import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 import axios from 'axios'
 import EOSIOClient from './utils/eosio-client'
 import IOClient from './utils/io-client'
-import { updatePostsForCreateAndEdit, updatePostsForLike, updatePostsForDelete } from './utils/posts-updater'
+import {
+  updatePostsForCreateAndEdit,
+  updatePostsForLike,
+  updatePostsForDelete
+} from './utils/posts-updater'
 import CreatePost from './CreatePost/CreatePost'
 import Posts from './Posts/Posts'
 import RealLogo from './assets/styles/img/logoReal.png';
@@ -441,24 +445,28 @@ class Home extends Component {
 
     return (
       <div class="app">
-        <div fixed>
-          <PrimarySearchAppBar />
-          <ECOESList />
-          <JJ />
-        </div>
-        <div className={`layoutStandard ${this.state.createOpen ? 'createOpen' : ''}`}>
-          <div className='toggleCreate' onClick={this.toggleCreate} />
-          <CreatePost createPost={this.createPost} />
-          <div className='cards'>
-            <Posts
-              posts={this.state.posts}
-              handleOnChange={this.handleOnChange}
-              deletePost={this.deletePost}
-              editPost={this.editPost}
-              likePost={this.likePost}
-            />
+        <div className="headerBar">
+          <div className="headerCenter">
+            <div className='title'>ECO.S</div>
           </div>
         </div>
+        <div className={`layoutStandard ${this.state.createOpen ? 'createOpen' : ''}`}>
+          <div className='toggleCreate' onClick={this.toggleCreate}>
+            Create Challenge
+          </div>
+          <CreatePost createPost={this.createPost} />
+        </div>
+
+        <div className='cards'>
+          <Posts
+            posts={this.state.posts}
+            handleOnChange={this.handleOnChange}
+            deletePost={this.deletePost}
+            editPost={this.editPost}
+            likePost={this.likePost}
+          />
+        </div>
+        <ECOESList />
       </div>
     )
   }
